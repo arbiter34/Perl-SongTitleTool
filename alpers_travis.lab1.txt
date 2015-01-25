@@ -1,0 +1,88 @@
+Question 1: Which word most often follows the word “happy”?
+
+Answer: birthday
+
+Question 2: Which word most often follows the word “sad”?
+
+Answer: song
+
+Question 3: How many different (unique) words follow the word “computer”?
+
+Answer: 57
+
+Question 4: Which word most often follows the word “computer”?
+
+Answer: love 
+
+Question 5: How many times does this word follow “computer”’
+
+Answer: 13
+
+Question 6: Using the starting word “happy”, what song title do you get?
+
+Answer: happy birthday song for the world is a little girl in the world is a little girl in the world is 
+
+Question 7: Using the starting word “sad”, what song title do you get?
+
+Answer:  sad song for the world is a little girl in the world is a little girl in the world is a
+
+Question 8: Using the starting word “hey”, what song title do you get?
+
+Answer: hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey 
+
+Question 9: Using the starting word “little”, what song title do you get?
+
+Answer: little girl in the world is a little girl in the world is a little girl in the world is a 
+
+Question 10: Try a few other words. What problem(s) do you see? Which phrase do you most often find recurring in these titles?
+
+Answer: Most words have extremly common subsequent words, which end up devolving into similar loops due to frequencies of different words. 
+I found phrases "is a little girl" and "in the world" to be recurring in many titles.
+
+Question 11: Using the starting word “little” again, what song title do you get now?
+
+Answer: little girl i love you me down my love you me down my love you me down my love you me 
+
+Question 12: Did this solve the problem from question 10? Explain.
+
+Answer: No it did not solve the issue because there are other words which have very high frequencies in English which aren't included in the common words we excluded, which leads to the same issue.
+
+
+Question 13: Using the starting word “love”, what song title do you get?
+
+Answer: love you me down my love you me down my love you me down my love you me down my love 
+
+
+
+Question 14: Did this solve the problem from question 10? If yes, give (here) your updated answer to Question 6. If no, propose a way to fix this problem and explain in detail.
+
+Answer: No it did not.  I believe checking for already used words would be the next easiest step to prevent these problems.
+
+
+Question 15: Try several words. Find a song title that terminates in less than 20 words. Could you find one? If so, which song title did you find? If not, why not?
+
+Answer: solar creates "solar plexus necrosis"
+
+Question 16: Name something you like about Perl. Explain.
+
+Answer: Perl is very powerful for string manipulation and parsing.
+
+
+Question 17: Name something you dislike about Perl. Explain.
+
+Answer: I dislike it's syntactical differences from C/C++, personal preference, but nonetheless.
+
+
+Question 18: Did you enjoy this lab? Which aspects did you like and/or dislike?
+
+Answer: Yeah I thought it was rather neat to see common following words in song titles.
+
+
+Question 19: Approximately how many hours did you spend on this lab?
+
+Answer: 2 hours.
+
+
+Question 20: Do you think you will use Perl again? For which type(s) of project(s)?
+
+Answer: I use Perl occasionally when I need to parse files quickly though I also use AutoHotKey for even quicker tasks since it is more portable and quicker to write.  Perl is also handy for building files byte by byte when doing exploit testing.

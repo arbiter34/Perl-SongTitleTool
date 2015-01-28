@@ -48,7 +48,7 @@ while($line = <INFILE>) {
 			$fixedTitle = lc($fixedTitle);
 
 			#filter out song titles less than 3 characters or with non english characters
-			if (length($fixedTitle) < 3 | $fixedTitle =~ /[^\d\w\s']/) {
+			if (length($fixedTitle) < 1 | $fixedTitle =~ /[^\d\w\s']/) {
 				next;
 			}
 			$count++;
@@ -64,12 +64,12 @@ while($line = <INFILE>) {
 			#loop through song title from second word
 			for ($i = 1; $i < scalar @words; $i++) {
 				#check if word contains non-printable character(prevent whitespace)
-				if (@words[$i] =~ /[^a-z']/) {
+				if (@words[$i] =~ /[^\w'0-9]/) {
 					next;
 				}
 
-				#filter out requested words
-				if (@words[$i] =~ /a|an|and|by|for|from|in|of|on|or|out|the|to|with/) {
+				# #filter out requested words
+				if (@words[$i] =~ /^a$|^an$|^and$|^by$|^for$|^from$|^in$|^of$|^on$|^or$|^out$|^the$|^to$|^with$/) {
 					next;
 				}
 
@@ -171,7 +171,9 @@ sub mcw {
 		}
 		#if current value is equal to big, do rand() to pick key per instructions
 		if ($vals[$_] == $big) {
-			$key = rand(2)-1 ? $keys[$_] : $key;
+			my $test = int(rand(2));
+			# print "Rand: $test\n";
+			$key = $test ? $keys[$_] : $key;
 		}
 	}
 	return $key;

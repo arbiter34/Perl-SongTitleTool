@@ -39,50 +39,70 @@ Question 10: Try a few other words. What problem(s) do you see? Which phrase do 
 Answer: Most words have extremly common subsequent words, which end up devolving into similar loops due to frequencies of different words. 
 I found phrases "is a little girl" and "in the world" to be recurring in many titles.
 
-Question 11: Using the starting word “little” again, what song title do you get now?
+Queston 10: Using the starting word “amore”, what song title do you get?
 
-Answer: little girl i love you me down my love you me down my love you me down my love you me 
+Answer: amore mio babbino caro gianni schicchi
 
-Question 12: Did this solve the problem from question 10? Explain.
-
-Answer: No it did not solve the issue because there are other words which have very high frequencies in English which aren't included in the common words we excluded, which leads to the same issue.
-
-
-Question 13: Using the starting word “love”, what song title do you get?
+Question 11: Using the starting word “love”, what song title do you get?
 
 Answer: love you me down my love you me down my love you me down my love you me down my love 
 
+Question 12: Using the starting word “little” again, what song title do you get now?
 
+Answer: little girl i love you me down my love you me down my love you me down my love you me 
 
-Question 14: Did this solve the problem from question 10? If yes, give (here) your updated answer to Question 6. If no, propose a way to fix this problem and explain in detail.
+Question 14: Explain why so many of the titles devolve into repeating patterns.
 
-Answer: No it did not.  I believe checking for already used words would be the next easiest step to prevent these problems.
-
+Answer: It devolves into repeating patterns because there are other words which have very high frequencies in English which aren't included in the common words we excluded, which leads to the same issue.  Many words which have high frequencies have only one word that follows so they always result in the same pattern.
 
 Question 15: Try several words. Find a song title that terminates in less than 20 words. Could you find one? If so, which song title did you find? If not, why not?
 
 Answer: solar creates "solar plexus necrosis"
 
-Question 16: Name something you like about Perl. Explain.
+Question 16: Describe in one to two paragraphs your extension and how it fixed the repeating
+phrase/word problem.
+
+Answer:  My extension uses a HashMap that is locally defined within the user input loop.  This Hash keeps track of all words retreived from mcw() and if we encounter a word twice it breaks the mcw loop and ends the song title.  This is effective in shortening titles into readable titles.  I do believe it would work to go with next most common word but that would take a more in depth implementation.
+
+Question 17: Using the starting word “montana”, what song title do you get?
+
+Answer: montana sacra nova baby i love you are 
+
+Question 18: Using the starting word “bob”, what song title do you get?
+
+Answer: bob marley vs world is my heart 
+
+Question 19: Using the starting word “bob’ again, do you get the same title? If no, what do
+you get? Try it a third time. Explain why the title might differ each time.
+
+Answer: Second time: bob marley me down road blues night long way you are 
+
+This is different because marley has 6 words which follow it with the same frequency, meaning they will switch per our implementation at random.
+
+Question 20: Share your favorite song title that you have found.
+
+Answer: bob marley medley 1 2 b flat major op 64 bytes
+
+Question 21: Name something you like about Perl. Explain.
 
 Answer: Perl is very powerful for string manipulation and parsing.
 
 
-Question 17: Name something you dislike about Perl. Explain.
+Question 22: Name something you dislike about Perl. Explain.
 
 Answer: I dislike it's syntactical differences from C/C++, personal preference, but nonetheless.
 
 
-Question 18: Did you enjoy this lab? Which aspects did you like and/or dislike?
+Question 23: Did you enjoy this lab? Which aspects did you like and/or dislike?
 
 Answer: Yeah I thought it was rather neat to see common following words in song titles.
 
 
-Question 19: Approximately how many hours did you spend on this lab?
+Question 24: Approximately how many hours did you spend on this lab?
 
 Answer: 2 hours.
 
 
-Question 20: Do you think you will use Perl again? For which type(s) of project(s)?
+Question 25: Do you think you will use Perl again? For which type(s) of project(s)?
 
 Answer: I use Perl occasionally when I need to parse files quickly though I also use AutoHotKey for even quicker tasks since it is more portable and quicker to write.  Perl is also handy for building files byte by byte when doing exploit testing.

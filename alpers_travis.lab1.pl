@@ -1,8 +1,8 @@
 ######################################### 	
 #    CSCI 305 - Programming Lab #1		
 #										
-#  < Replace with your Name >			
-#  < Replace with your Email >			
+#  < Travis Alpers >			
+#  < arbiter34@gmail.com >			
 #										
 #########################################
 
@@ -134,14 +134,22 @@ while ($input ne "q"){
 		#init nextWord
 		my $nextWord = $input;
 
-		for (my $i = 0; $i < 20; $i++) {
+		my %usedWords = map {};
+
+		while (true) {
 			#set nextWord to most common following word of current nextWord
-			$nextWord = mcw($nextWord);
-
-
-			#print
-			print $nextWord." ";
+			my $tempWord = mcw($nextWord);
+			if (!exists($usedWords{$tempWord})) {
+				
+				$nextWord = $tempWord;
+				$usedWords{$nextWord} = 1;
+				#print
+				print $nextWord." ";
+			} else {
+				last;
+			}
 		}
+
 		#newline for readability
 		print "\n";
 	}
